@@ -1,10 +1,10 @@
 window.addEventListener('load', function() {
-  const form = document.getElementById('search-form');
+  const button = document.getElementById('submit-btn');
   const searchField = document.getElementById('search-keyword');
   const responseContainer = document.getElementById('response-container');
   let searchedForText;
 
-  form.addEventListener('submit', function (e) {
+  button.addEventListener('click', function (e) {
     e.preventDefault();
     responseContainer.innerHTML = '';
     searchedForText = searchField.value;
