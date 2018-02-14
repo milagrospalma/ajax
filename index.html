@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title></title>
-  <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
   <header class="masthead">
-    <h1>¿Qué te interesa hoy?</h1>
-    <div class="site-container">
-      <form action="" id="search-form">
-        <label class="visuallyhidden" for="search-keyword">¿Qué buscamos?</label>
-        <input id="search-keyword" type="text" name="search-keyword" placeholder="Ingresa lo que estás buscando" required>
-        <input id="submit-btn" type="submit" value="submit">
+    <nav>
+      <div class="nav-wrapper">
+        <a class="brand-logo center">¿Qué te interesa hoy?</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down"></ul>
+      </div>
+    </nav>
+    <div class="row">
+      <form id="search-form" class="col s10 offset-s1 m8 offset-m2">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="search-keyword" type="text" class="validate" name="search-keyword" required>
+            <label for="search-keyword" data-error="wrong" data-success="right">¿Qué buscamos?</label>
+            <input id="submit-btn" class="waves-effect waves-light btn-large" type="submit" value="Buscar">
+          </div>
+        </div>
       </form>
     </div>
   </header>
   <div class="site-container">
-    <ul id="response-container"></ul>
+    <div class="row">
+      <div class="col m8 offset-m2">
+        <ul id="response-container"></ul>
+      </div>
+    </div>
   </div>
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-  <script src="vendors/materialize/js/materialize.min.js"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>

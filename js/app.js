@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
     const snippet = article.snippet;
 
     let li = document.createElement('li');
-    li.className = 'articleClass';
+    li.className = 'card';
     li.innerText = snippet;
 
     responseContainer.appendChild(li);
