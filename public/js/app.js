@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     articleRequest.onerror = handleError;
     articleRequest.send();
   }
-
+  
   function handleError() {
     console.log('Se presentó un error.');
   }
@@ -26,13 +26,12 @@ window.addEventListener('load', function() {
   function addNews() {
     const data = JSON.parse(this.responseText);
     const article = data.response.docs[0];
+    console.log(article);
     const title = article.headline.main;
     const snippet = article.snippet;
-
     let li = document.createElement('li');
     li.className = 'card';
     li.innerText = snippet;
-
     responseContainer.appendChild(li);
   }
 });
